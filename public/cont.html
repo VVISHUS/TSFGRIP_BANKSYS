@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSF-CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/bank.png" type="image/x-icon">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <a href="/index.html">
+               <img src="/img/bank.png" alt="Bank Logo" width="50">
+           </a>
+        </div>
+        <ul class="list">
+            <li class="nav-item"><a href="/index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="/reg.html" class="nav-link">REGISTER</a></li>
+            <li class="nav-item"><a href="/acc" class="nav-link">ACCOUNTS</a></li>
+            <li class="nav-item"><a href="/trans" class="nav-link">TRANSFER</a></li>
+            <li class="nav-item"><a href="/history" class="nav-link">HISTORY</a></li>
+            <li class="nav-item"><a href="/cont.html" class="nav-link">CONTACT</a></li>
+        </ul>
+</div>
+    </div>
+
+    <div class="contact">
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+         <h2 class="section-heading">Contact Us Here!!</h2>
+         <form class="contact-form" name="contact" netlify action="/cont" action="/cont.html" method="post">
+             <div class="form-control">
+                 <label for="name">Name:</label>
+                 <input type="text" id="name" name="name" required>
+             </div>
+             <div class="form-control">
+                 <label for="email">Email:</label>
+                 <input type="email" id="email" name="email" required>
+             </div>
+             <div class="form-control">
+                 <label for="message">Message:</label>
+                 <textarea id="message" name="message" required placeholder="Enter any Queries,or anomaly regarding anything..."></textarea>
+             </div>
+             <div class="button-container">
+               <button type="submit" class="btn" value="submit">SEND US!!</button>
+             </div>
+         </form>
+        </div>
+         <footer class="footer-section">
+            <h6>THANKS FOR VISITING!!</h6>
+            <p>&copy; 2023 TSF</p>
+          </footer>
+          <script src="script.js"></script>
+
+</body>
+</html>

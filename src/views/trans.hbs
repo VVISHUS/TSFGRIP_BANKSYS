@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSF-TRANFER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/bank.png" type="image/x-icon">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <a href="/index.html">
+               <img src="/img/bank.png" alt="Bank Logo" width="50">
+           </a>
+          </div>
+             <ul class="list">
+            <li class="nav-item"><a href="/index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="/reg.html" class="nav-link">REGISTER</a></li>
+            <li class="nav-item"><a href="/acc" class="nav-link">ACCOUNTS</a></li>
+            <li class="nav-item"><a href="/trans" class="nav-link">TRANSFER</a></li>
+            <li class="nav-item"><a href="/history" class="nav-link">HISTORY</a></li>
+            <li class="nav-item"><a href="/cont.html" class="nav-link">CONTACT</a></li>
+        </ul>
+  </div>
+<div class="transf">
+  <section id="transf" class="transf-section">
+    <h2 class="section-heading">BANK TRANSFER</h2>
+    <form class="transfer-form" action="/trans" method="post">
+      <div class="form-control">
+        <label for="from-account">From Account:</label>
+        <select id="from-account" name="fromaccount" required>
+          <option value="">Select Account</option>
+          {{#each users}}
+          <option value="{{this.accountNumber}}">{{this.fullname}} &lt;{{this.accountNumber}}&gt;</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="to-account">To Account:</label>
+        <select id="to-account" name="toaccount" required>
+          <option value="">Select Account</option>
+          {{#each users}}
+          <option value="{{this.accountNumber}}">{{this.fullname}} &lt;{{this.accountNumber}}&gt;</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="btn" value="submit">TRANSFER</button>
+      </div>
+    </form>
+    {{#if transferSuccess}}
+    <div class="success-message">
+      Transfer successful!
+    </div>
+    {{/if}}
+  </section>
+</div>
+
+
+    </div>
+    <footer class="footer-section">
+        <h6>THANKS FOR VISITING!!</h6>
+        <p>&copy; 2023 TSF</p>
+      </footer>
+      <script src="script.js"></script>
+
+</body>
+</html>

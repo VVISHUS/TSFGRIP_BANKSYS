@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSFER-HISTORY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/bank.png" type="image/x-icon">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <a href="/index.html">
+                <img src="/img/bank.png" alt="Bank Logo" width="50">
+            </a>
+        </div>
+        <ul class="list">
+            <li class="nav-item"><a href="/index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="/reg.html" class="nav-link">REGISTER</a></li>
+            <li class="nav-item"><a href="/acc" class="nav-link">ACCOUNTS</a></li>
+            <li class="nav-item"><a href="/trans" class="nav-link">TRANSFER</a></li>
+            <li class="nav-item"><a href="/history" class="nav-link">HISTORY</a></li>
+            <li class="nav-item"><a href="/cont.html" class="nav-link">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="history">
+        <section id="history" class="history-section">
+            <h2 class="section-heading">Transfer History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sender's Name</th>
+                        <th>Sender's Number</th>
+                        <th>Receiver's Name</th>
+                        <th>Receiver's Number</th>
+                        <th>Amount Tranfered</th>
+                        <th>Date/Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each users}}
+                    <tr>
+                        <td>{{this.senderName}}</td>
+                        <td>{{this.senderAccountNumber}}</td>
+                        <td>{{this.receiverName}}</td>
+                        <td>{{this.receiverAccountNumber}}</td>
+                        <td>{{this.amount}}</td>
+                        <td>{{this.date}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <footer class="footer-section">
+        <h6>THANKS FOR VISITING!!</h6>
+        <p>&copy; 2023 TSF</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
